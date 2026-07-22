@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Attendance History</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+
+  <!-- Sidebar -->
+
+  <div class="sidebar">
+
+    <div class="logo">
+
+      <h1>
+        Admin<span>Panel</span>
+      </h1>
+
+    </div>
+
+
+    <div class="nav-menu">
+
+      <div class="menu-heading">
+        Main
+      </div>
+
+
+      <a href="dashboard.html" class="nav-item">
+
+        <i class="fas fa-chart-pie"></i>
+
+        <span>
+          Dashboard
+        </span>
+
+      </a>
+
+
+      <a href="employee.html" class="nav-item">
+
+        <i class="fas fa-users"></i>
+
+        <span>
+          Employee
+        </span>
+
+      </a>
+
+
+      <a href="attendance.html" class="nav-item">
+
+        <i class="fas fa-calendar-check"></i>
+
+        <span>
+          Attendance
+        </span>
+
+      </a>
+
+
+      <a href="history.html" class="nav-item active">
+
+        <i class="fas fa-clock-rotate-left"></i>
+
+        <span>
+          History
+        </span>
+
+      </a>
+
+
+      <div class="menu-heading">
+        Admin
+      </div>
+
+
+      <a href="#" class="nav-item">
+
+        <i class="fas fa-cog"></i>
+
+        <span>
+          Settings
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- Header -->
+
+  <div class="header">
+
+    <div class="search-bar">
+
+      <i class="fas fa-search"></i>
+
+      <input
+        type="text"
+        placeholder="Search employee history..."
+      >
+
+    </div>
+
+  </div>
+
+
+  <!-- Main Content -->
+
+  <div class="main-content">
+
+
+    <!-- Page Title -->
+
+    <div class="page-title">
+
+      <div>
+
+        <div class="title">
+          Employee Attendance History
+        </div>
+
+        <p class="page-subtitle">
+          View and analyze employee attendance records
+        </p>
+
+      </div>
+
+
+      <div class="action-buttons">
+
+        <button class="btn btn-outline">
+
+          <i class="fas fa-download"></i>
+
+          Export Report
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- Filters -->
+
+    <div class="table-card">
+
+
+      <div class="card-title">
+
+        <h3>
+
+          <i class="fas fa-filter"></i>
+
+          Filter Attendance History
+
+        </h3>
+
+      </div>
+
+
+      <div class="filter-container">
+
+
+        <div class="filter-group">
+
+          <label>
+            Employee
+          </label>
+
+
+          <select>
+
+            <option>
+              Select Employee
+            </option>
+
+            <option selected>
+              John Smith - EMP001
+            </option>
+
+            <option>
+              Sarah Williams - EMP002
+            </option>
+
+            <option>
+              David Brown - EMP003
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="filter-group">
+
+          <label>
+            From Date
+          </label>
+
+
+          <input
+            type="date"
+            value="2026-07-01"
+          >
+
+        </div>
+
+
+        <div class="filter-group">
+
+          <label>
+            To Date
+          </label>
+
+
+          <input
+            type="date"
+            value="2026-07-23"
+          >
+
+        </div>
+
+
+        <button class="btn btn-primary">
+
+          <i class="fas fa-filter"></i>
+
+          Apply Filter
+
+        </button>
+
+
+        <button class="btn btn-outline">
+
+          <i class="fas fa-rotate-left"></i>
+
+          Reset
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- Employee Profile -->
+
+    <div class="table-card">
+
+
+      <div class="employee-profile">
+
+
+        <div class="profile-avatar">
+
+          <i class="fas fa-user"></i>
+
+        </div>
+
+
+        <div class="profile-info">
+
+          <h2>
+            John Smith
+          </h2>
+
+
+          <p>
+
+            EMP001
+
+            <span>
+              •
+            </span>
+
+            Software Engineer
+
+            <span>
+              •
+            </span>
+
+            IT Department
+
+          </p>
+
+
+          <span class="status active">
+
+            <i class="fas fa-check-circle"></i>
+
+            Active
+
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Statistics -->
+
+    <div class="stats-cards">
+
+
+      <div class="stat-card">
+
+        <div class="card-header">
+
+          <div>
+
+            <div class="card-value">
+              23
+            </div>
+
+            <div class="card-label">
+              Total Working Days
+            </div>
+
+          </div>
+
+
+          <div class="card-icon purple">
+
+            <i class="fas fa-calendar-days"></i>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <div class="card-header">
+
+          <div>
+
+            <div class="card-value">
+              20
+            </div>
+
+            <div class="card-label">
+              Present Days
+            </div>
+
+          </div>
+
+
+          <div class="card-icon green">
+
+            <i class="fas fa-user-check"></i>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <div class="card-header">
+
+          <div>
+
+            <div class="card-value">
+              2
+            </div>
+
+            <div class="card-label">
+              Absent Days
+            </div>
+
+          </div>
+
+
+          <div class="card-icon orange">
+
+            <i class="fas fa-user-xmark"></i>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <div class="card-header">
+
+          <div>
+
+            <div class="card-value">
+              86.96%
+            </div>
+
+            <div class="card-label">
+              Attendance Rate
+            </div>
+
+          </div>
+
+
+          <div class="card-icon blue">
+
+            <i class="fas fa-chart-line"></i>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- History Table -->
+
+    <div class="table-card">
+
+
+      <div class="card-title">
+
+        <h3>
+
+          <i class="fas fa-clock-rotate-left"></i>
+
+          Attendance Records
+
+        </h3>
+
+
+        <button class="btn btn-outline btn-sm">
+
+          <i class="fas fa-download"></i>
+
+          Export
+
+        </button>
+
+      </div>
+
+
+      <table class="data-table">
+
+
+        <thead>
+
+          <tr>
+
+            <th>
+              Date
+            </th>
+
+            <th>
+              Day
+            </th>
+
+            <th>
+              Check-In
+            </th>
+
+            <th>
+              Check-Out
+            </th>
+
+            <th>
+              Working Hours
+            </th>
+
+            <th>
+              Status
+            </th>
+
+          </tr>
+
+        </thead>
+
+
+        <tbody>
+
+
+          <tr>
+
+            <td>
+              23 Jul 2026
+            </td>
+
+            <td>
+              Thursday
+            </td>
+
+            <td>
+              09:02 AM
+            </td>
+
+            <td>
+              06:05 PM
+            </td>
+
+            <td>
+              8h 03m
+            </td>
+
+            <td>
+
+              <span class="status active">
+
+                <i class="fas fa-check-circle"></i>
+
+                Present
+
+              </span>
+
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              22 Jul 2026
+            </td>
+
+            <td>
+              Wednesday
+            </td>
+
+            <td>
+              09:10 AM
+            </td>
+
+            <td>
+              06:00 PM
+            </td>
+
+            <td>
+              7h 50m
+            </td>
+
+            <td>
+
+              <span class="status active">
+
+                <i class="fas fa-check-circle"></i>
+
+                Present
+
+              </span>
+
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              21 Jul 2026
+            </td>
+
+            <td>
+              Tuesday
+            </td>
+
+            <td>
+              —
+            </td>
+
+            <td>
+              —
+            </td>
+
+            <td>
+              —
+            </td>
+
+            <td>
+
+              <span class="status cancelled">
+
+                <i class="fas fa-times-circle"></i>
+
+                Absent
+
+              </span>
+
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              20 Jul 2026
+            </td>
+
+            <td>
+              Monday
+            </td>
+
+            <td>
+              09:00 AM
+            </td>
+
+            <td>
+              06:00 PM
+            </td>
+
+            <td>
+              8h 00m
+            </td>
+
+            <td>
+
+              <span class="status active">
+
+                <i class="fas fa-check-circle"></i>
+
+                Present
+
+              </span>
+
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+</body>
+
+</html>

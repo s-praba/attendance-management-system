@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Employee Management</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+
+  <!-- Sidebar -->
+
+  <div class="sidebar">
+
+    <div class="logo">
+
+      <h1>
+        Admin<span>Panel</span>
+      </h1>
+
+    </div>
+
+
+    <div class="nav-menu">
+
+      <div class="menu-heading">
+        Main
+      </div>
+
+
+      <a href="dashboard.html" class="nav-item">
+
+        <i class="fas fa-chart-pie"></i>
+
+        <span>
+          Dashboard
+        </span>
+
+      </a>
+
+
+      <a href="employee.html" class="nav-item active">
+
+        <i class="fas fa-users"></i>
+
+        <span>
+          Employee
+        </span>
+
+      </a>
+
+
+      <a href="attendance.html" class="nav-item">
+
+        <i class="fas fa-calendar-check"></i>
+
+        <span>
+          Attendance
+        </span>
+
+      </a>
+
+
+      <a href="history.html" class="nav-item">
+
+        <i class="fas fa-clock-rotate-left"></i>
+
+        <span>
+          History
+        </span>
+
+      </a>
+
+
+      <div class="menu-heading">
+        Admin
+      </div>
+
+
+      <a href="#" class="nav-item">
+
+        <i class="fas fa-cog"></i>
+
+        <span>
+          Settings
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- Header -->
+
+  <div class="header">
+
+    <div class="search-bar">
+
+      <i class="fas fa-search"></i>
+
+      <input
+        type="text"
+        placeholder="Search employees..."
+      >
+
+    </div>
+
+  </div>
+
+
+  <!-- Main Content -->
+
+  <div class="main-content">
+
+
+    <!-- Page Title -->
+
+    <div class="page-title">
+
+      <div>
+
+        <div class="title">
+          Employee Management
+        </div>
+
+        <p class="page-subtitle">
+          Manage employee information and records
+        </p>
+
+      </div>
+
+
+      <div class="action-buttons">
+
+        <button class="btn btn-outline">
+
+          <i class="fas fa-download"></i>
+
+          Export
+
+        </button>
+
+
+        <button class="btn btn-primary">
+
+          <i class="fas fa-plus"></i>
+
+          Add Employee
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- Statistics -->
+
+    <div class="stats-cards">
+
+
+      <div class="stat-card">
+
+        <div class="card-header">
+
+          <div>
+
+            <div class="card-value">
+              25
+            </div>
+
+            <div class="card-label">
+              Total Employees
+            </div>
+
+          </div>
+
+
+          <div class="card-icon purple">
+
+            <i class="fas fa-users"></i>
+
+          </div>
+
+        </div>
+
+
+        <div class="card-change positive">
+
+          <i class="fas fa-users"></i>
+
+          <span>
+            All employees
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <div class="card-header">
+
+          <div>
+
+            <div class="card-value">
+              23
+            </div>
+
+            <div class="card-label">
+              Active Employees
+            </div>
+
+          </div>
+
+
+          <div class="card-icon green">
+
+            <i class="fas fa-user-check"></i>
+
+          </div>
+
+        </div>
+
+
+        <div class="card-change positive">
+
+          <i class="fas fa-arrow-up"></i>
+
+          <span>
+            92% of total employees
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <div class="card-header">
+
+          <div>
+
+            <div class="card-value">
+              2
+            </div>
+
+            <div class="card-label">
+              Inactive Employees
+            </div>
+
+          </div>
+
+
+          <div class="card-icon orange">
+
+            <i class="fas fa-user-slash"></i>
+
+          </div>
+
+        </div>
+
+
+        <div class="card-change negative">
+
+          <i class="fas fa-user-minus"></i>
+
+          <span>
+            Currently inactive
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Filters -->
+
+    <div class="table-card">
+
+
+      <div class="card-title">
+
+        <h3>
+
+          <i class="fas fa-filter"></i>
+
+          Filter Employees
+
+        </h3>
+
+      </div>
+
+
+      <div class="filter-container">
+
+
+        <div class="filter-group">
+
+          <label>
+            Department
+          </label>
+
+
+          <select>
+
+            <option value="">
+              All Departments
+            </option>
+
+            <option>
+              IT
+            </option>
+
+            <option>
+              HR
+            </option>
+
+            <option>
+              Finance
+            </option>
+
+            <option>
+              Operations
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="filter-group">
+
+          <label>
+            Status
+          </label>
+
+
+          <select>
+
+            <option value="">
+              All Status
+            </option>
+
+            <option>
+              Active
+            </option>
+
+            <option>
+              Inactive
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <button class="btn btn-primary">
+
+          <i class="fas fa-filter"></i>
+
+          Apply Filter
+
+        </button>
+
+
+        <button class="btn btn-outline">
+
+          <i class="fas fa-rotate-left"></i>
+
+          Reset
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- Employee Table -->
+
+    <div class="table-card">
+
+
+      <div class="card-title">
+
+        <h3>
+
+          <i class="fas fa-users"></i>
+
+          Employee List
+
+        </h3>
+
+
+        <button class="btn btn-outline btn-sm">
+
+          <i class="fas fa-sync"></i>
+
+          Refresh
+
+        </button>
+
+      </div>
+
+
+      <table class="data-table">
+
+
+        <thead>
+
+          <tr>
+
+            <th>
+              Employee ID
+            </th>
+
+            <th>
+              Name
+            </th>
+
+            <th>
+              Email
+            </th>
+
+            <th>
+              Mobile
+            </th>
+
+            <th>
+              Department
+            </th>
+
+            <th>
+              Designation
+            </th>
+
+            <th>
+              Status
+            </th>
+
+            <th>
+              Actions
+            </th>
+
+          </tr>
+
+        </thead>
+
+
+        <tbody>
+
+
+          <tr>
+
+            <td>
+              EMP001
+            </td>
+
+            <td>
+              <strong>
+                John Smith
+              </strong>
+            </td>
+
+            <td>
+              john@example.com
+            </td>
+
+            <td>
+              9876543210
+            </td>
+
+            <td>
+              IT
+            </td>
+
+            <td>
+              Software Engineer
+            </td>
+
+            <td>
+
+              <span class="status active">
+
+                <i class="fas fa-check-circle"></i>
+
+                Active
+
+              </span>
+
+            </td>
+
+            <td>
+
+              <button class="btn btn-outline btn-sm">
+
+                <i class="fas fa-eye"></i>
+
+              </button>
+
+
+              <button class="btn btn-outline btn-sm">
+
+                <i class="fas fa-edit"></i>
+
+              </button>
+
+
+              <button class="btn btn-outline btn-sm">
+
+                <i class="fas fa-trash"></i>
+
+              </button>
+
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              EMP002
+            </td>
+
+            <td>
+              <strong>
+                Sarah Williams
+              </strong>
+            </td>
+
+            <td>
+              sarah@example.com
+            </td>
+
+            <td>
+              9876543211
+            </td>
+
+            <td>
+              HR
+            </td>
+
+            <td>
+              HR Executive
+            </td>
+
+            <td>
+
+              <span class="status active">
+
+                <i class="fas fa-check-circle"></i>
+
+                Active
+
+              </span>
+
+            </td>
+
+            <td>
+
+              <button class="btn btn-outline btn-sm">
+
+                <i class="fas fa-eye"></i>
+
+              </button>
+
+
+              <button class="btn btn-outline btn-sm">
+
+                <i class="fas fa-edit"></i>
+
+              </button>
+
+
+              <button class="btn btn-outline btn-sm">
+
+                <i class="fas fa-trash"></i>
+
+              </button>
+
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              EMP003
+            </td>
+
+            <td>
+              <strong>
+                David Brown
+              </strong>
+            </td>
+
+            <td>
+              david@example.com
+            </td>
+
+            <td>
+              9876543212
+            </td>
+
+            <td>
+              Finance
+            </td>
+
+            <td>
+              Accountant
+            </td>
+
+            <td>
+
+              <span class="status cancelled">
+
+                <i class="fas fa-times-circle"></i>
+
+                Inactive
+
+              </span>
+
+            </td>
+
+            <td>
+
+              <button class="btn btn-outline btn-sm">
+
+                <i class="fas fa-eye"></i>
+
+              </button>
+
+
+              <button class="btn btn-outline btn-sm">
+
+                <i class="fas fa-edit"></i>
+
+              </button>
+
+
+              <button class="btn btn-outline btn-sm">
+
+                <i class="fas fa-trash"></i>
+
+              </button>
+
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+</body>
+
+</html>
