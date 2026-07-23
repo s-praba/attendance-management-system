@@ -1063,7 +1063,7 @@ function Attendance() {
 
                         <i className="fas fa-trash"></i>
 
-                        Delete
+                        delete
 
                       </button>
 
@@ -1093,7 +1093,6 @@ function Attendance() {
     </div>
 
   );
-
 }
 
 
