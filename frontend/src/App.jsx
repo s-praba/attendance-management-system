@@ -6,15 +6,10 @@ import {
 } from "react-router-dom";
 
 import { useState } from "react";
-
 import Login from "./components/Login";
-
 import Dashboard from "./components/Dashboard";
-
 import Employee from "./components/Employee";
-
 import Attendance from "./components/Attendance";
-
 import History from "./components/History";
 
 
@@ -33,14 +28,10 @@ function ProtectedRoute({ children, isLoggedIn }) {
   return children;
 
 }
-
-
 // =========================
 // APP
 // =========================
-
 function App() {
-
 
   const [isLoggedIn, setIsLoggedIn] = useState(
 
@@ -69,13 +60,10 @@ function App() {
 
     <BrowserRouter>
 
-
       <Routes>
 
 
-        {/* =========================
-            LOGIN PAGE
-        ========================= */}
+        {/* LOGIN */}
 
         <Route
 
@@ -102,9 +90,7 @@ function App() {
         />
 
 
-        {/* =========================
-            DEFAULT PAGE
-        ========================= */}
+        {/* DEFAULT */}
 
         <Route
 
@@ -131,9 +117,7 @@ function App() {
         />
 
 
-        {/* =========================
-            DASHBOARD
-        ========================= */}
+        {/* DASHBOARD */}
 
         <Route
 
@@ -147,7 +131,11 @@ function App() {
 
             >
 
-              <Dashboard />
+              <Dashboard
+
+                onLogout={handleLogout}
+
+              />
 
             </ProtectedRoute>
 
@@ -156,9 +144,7 @@ function App() {
         />
 
 
-        {/* =========================
-            EMPLOYEE
-        ========================= */}
+        {/* EMPLOYEE */}
 
         <Route
 
@@ -181,9 +167,7 @@ function App() {
         />
 
 
-        {/* =========================
-            ATTENDANCE
-        ========================= */}
+        {/* ATTENDANCE */}
 
         <Route
 
@@ -206,9 +190,7 @@ function App() {
         />
 
 
-        {/* =========================
-            HISTORY
-        ========================= */}
+        {/* HISTORY */}
 
         <Route
 
@@ -231,9 +213,7 @@ function App() {
         />
 
 
-        {/* =========================
-            INVALID URL
-        ========================= */}
+        {/* INVALID URL */}
 
         <Route
 
@@ -259,9 +239,7 @@ function App() {
 
         />
 
-
       </Routes>
-
 
     </BrowserRouter>
 
